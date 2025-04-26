@@ -1,0 +1,27 @@
+第一章：Vue基础
+1.学前须知：
+    HTML
+    CSS
+    JavaScript
+    AJAX:无刷新的和服务器进行交互
+#插件：Live Server：保存文件时，自动刷新浏览器。
+    启动具有静态和动态页面实时重新加载功能的本地开发服务器。
+    1.安装：
+        在VSCode中，点击插件图标，搜索Live Server，安装。
+    2.使用：
+        在HTML文件中，点击右键，选择“Open with Live Server”
+        在VSCode中，点击插件图标，选择“Open with Live Server”
+
+Vue简介：
+1.JavaScript框架，用于构建用户界面。
+2.简化Dom操作
+3.响应式数据驱动
+
+第一个Vue程序
+http://cn.vuejs.org
+
+
+
+第二章：本地应用
+第三章：网络应用
+第四章：综合应用

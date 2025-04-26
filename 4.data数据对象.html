@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <title>data：数据对象</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div id="app">
+        {{message}}
+        <h2>{{school.name}}{{school.mobile}}</h2>
+        <ul>
+            <li>{{campus[0]}}</li>
+            <li>{{campus[1]}}</li>
+            <li>{{campus[2]}}</li>
+        </ul>
+        <p>tips:</p>
+        <p>Vue用到的数据定义在data中</p>
+        <p>data中可以写复杂类型的数据</p>
+        <p>渲染复杂类型数据时，遵守js的语法即可</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: '消息',
+                array:[],
+                obj:{},
+                school:{
+                    name:'电子校',
+                    type:'大专',
+                    mobile:'123321'
+                },
+                campus:["数组的第一个","第二个","third"]
+            }
+        })
+    </script>
+</body>
+
+</html>
