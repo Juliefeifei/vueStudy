@@ -10,14 +10,15 @@
             <h2>插值表达式this is{{message+"!"}}</h2>
             <p>在插值表达式中单双引号都可以使用，因为他的外面没有引号</p>
             <p>如果是v-text的话要用</p>
-            https://www.bilibili.com/video/BV12J411m7MG?t=196.0&p=7
+            <a v-text="info"></a>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <script>
             var app = new Vue({
                 el: '#app',
                 data: {
-                    message:"数据"
+                    message:"数据",
+                    info:"信息"
                 }
             })
         </script>
