@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="cn">
+    <head>
+        <title>v-on事件绑定</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="app">
+            {{message}}
+            <p>为元素绑定事件，如：onclick点击，monseenter鼠标移入 dblclick双击</p>
+            <input type="text">
+            <input type="button">
+            <input type="button" value="事件绑定">
+            <input type="button" value="事件绑定" v-on:事件名="dolt">
+            <input type="button" value="事件绑定单击" v-on:click="dolt">
+            <input type="button" value="事件绑定鼠标移入" v-on:monseenter="dolt">
+            <input type="button" value="事件绑定双击" v-on:dblclick="dolt">
+            <input type="button" value="事件绑定同样双击" @dblclick="dolt">
+            <p>更改元素的显示</p>
+            <p>点一下炒蛋变喝汤/点一下多一个好吃</p>
+            <h2 @click="changeFood">{{food}}</h2>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    food:"炒蛋"
+                },
+                methods:{
+                    dolt:function(){
+                        alert("棒！");
+                    },
+                    changeFood:function(){
+                        console.log(this.food);
+                        // this.food="喝汤";
+                        this.food+="好吃！";
+                        console.log(this.food);
+                    }
+                },
+            })
+        </script>
+    </body>
+</html>
