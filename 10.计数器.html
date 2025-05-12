@@ -1,0 +1,44 @@
+<!-- 内容绑定，事件绑定 -->
+ <!-- 
+https://www.bilibili.com/video/BV12J411m7MG?t=8.0&p=11
+ -->
+
+<!DOCTYPE html>
+<html lang="cn">
+    <head>
+        <title>计数器</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="app">
+            <button @click="jian">-</button>
+            <span>{{num}}</span>
+            <button @click="jia">+</button>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    num:1,
+                    message: 'Hello Vue!'
+                },
+                methods:{
+                    jia:function(){
+                        if(this.num<10){
+                            console.log('jia');
+                            this.num++;
+                        }else
+                            alert('最大了');
+                    },
+                    jian:function(){
+                        if(this.num>0){
+                            console.log('jian');
+                            this.num--;
+                        }else alert('最小了！');
+                    }
+                }
+            })
+        </script>
+
+    </body>
