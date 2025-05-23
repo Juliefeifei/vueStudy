@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="cn">
+    <head>
+        <title>v-if</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="app">
+            <p>切换元素的显示和隐藏</p>
+            <input type="button" @click="changeShow" value="切换">
+            <p v-if="isShow">v-show只是基于css的变化，v-if是能直接删除dom元素</p>
+            <p>频繁切换的元素用v-show（操作样式），
+                反之用v-if（v-if操作DOM树对性能消耗较大）</p>
+            {{message}}
+            <p v-if="tempreture>38">温度高了</p>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    message: 'Hello Vue!',
+                    isShow: false,
+                    tempreture:36,
+                },
+                methods:{
+                        changeShow:function(){
+                            this.isShow=!this.isShow;
+                        }
+                    }
+            })
+        </script>
+    </body>
+</html>
